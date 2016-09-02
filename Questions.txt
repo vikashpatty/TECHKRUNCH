@@ -1,0 +1,6 @@
+1. (Easy)
+Number duplication.
+2.(Medium)
+Sequnece detector
+3.(Hard)
+(Octal to decimal)

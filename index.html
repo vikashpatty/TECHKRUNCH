@@ -1,0 +1,595 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	
+	
+<style type="text/css">
+.bgclr {background-color: white; color: black; font-weight: bold;}
+
+a:visited { visibility: hidden; }
+</style>
+
+<script language="JavaScript">
+
+
+<!-- Begin
+// Insert number of questions
+var numQues = 30;
+
+// Insert number of choices in each question
+var numChoi = 4;
+
+// Insert number of questions displayed in answer area
+var answers = new Array(30);
+var pass;
+
+pass="xyz";
+// Insert answers to questions
+answers[0] = "Raff";
+answers[1] = "Raff";
+answers[2] = "Raff";
+answers[3] = "Raff";
+answers[4] = "Raff";
+answers[5] = "Raff";
+answers[6] = "Raff";
+answers[7] = "Raff";
+answers[8] = "Raff";
+answers[9] = "Raff";
+answers[10] = "Raff";
+answers[11] = "Raff";
+answers[12] = "Raff";
+answers[13] = "Raff";
+answers[14] = "Raff";
+answers[15] = "Raff";
+answers[16] = "Raff";
+answers[17] = "Raff";
+answers[18] = "Raff";
+answers[19] = "Raff";
+answers[20] = "Raff";
+answers[21] = "Raff";
+answers[22] = "Raff";
+answers[23] = "Raff";
+answers[24] = "Raff";
+answers[25] = "Raff";
+answers[26] = "Raff";
+answers[27] = "Raff";
+answers[28] = "Raff";
+answers[29] = "Raff";
+answers[30] = "Raff";
+
+
+
+
+function getScore(form) {
+
+if(form.percentage1.value=="iamtheone"){
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) 
+{
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++)
+ {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+  
+}
+else
+{
+form.percentage.value="Wrong Password";
+}
+form.percentage1.value="";
+}
+var count=0;
+function myFunction() {
+if(count==0){
+    setTimeout(function(){ alert("Time out!!!! \n Wait for the invigilator to get your score"); }, 1000*1800);
+	window.open("Time.html","MsgWindow", "width=400, height=200");
+	location.href = "#q1";
+	count=count+1;}
+	else{
+	void(0);}
+}
+
+//  End -->
+</script>
+
+		
+	    <title>CodeX</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		
+	
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">TechKrunch</h1>
+							<p>CodeX</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Home</span></a></li>
+								<li><a href="#q1" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-question">Questions 1-5</span></a></li>
+								<li><a href="#q2" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-question">Questions 6-10</span></a></li>
+								<li><a href="#q3" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-question">Questions 11-15</span></a></li>
+								<li><a href="#q4" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-question">Questions 16-20</span></a></li>
+								<li><a href="#q5" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-question">Questions 21-25</span></a></li>
+								<li><a href="#q6" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-question">Questions 25-30</span></a></li>
+								<li><a href="#s" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Get score</span></a></li>
+								
+								
+								</ul>
+						</nav>
+
+				</div>
+
+				
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							
+							
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							
+							<footer>
+							<form>
+								<a href="javascript:myFunction();" class="button scrolly" target="_blank" id="Quiz_button">Start</a>
+								<!--<input type="button" value="Get score" onClick="myFunction()">-->
+								</form>
+							</footer>
+							
+							
+
+						</div>
+					</section>
+
+			
+
+				<!-- About Me -->
+					<section id="q1" class="three">
+						<div class="container">
+
+							<header>
+								<h2>TechKrunch</h2>
+							</header>
+
+							<h3><center>Questions 1-5</center></h3>
+
+<form name="quiz">
+1.What is the limitation of a Structure?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q1" value="fjjdujfhuye">All the data-members of a Structure must have the same fundamental data-type.</li>
+  <li><input type="radio" name="q1" value="Raff">Basic mathematical operations cannot be applied directly on the Structure variable.</li>
+  <li><input type="radio" name="q1" value="dhhhufh hhryhhf">An array of structure variable cannot be created.</li>
+  <li><input type="radio" name="q1" value="nnnnn">Options a) and c) are both the limitation of a Structure.</li>
+</ul>
+
+
+2.What is wrong with the following loop?
+<p>int sum=0;</p>
+<p>while(sum<=1000)</p>
+<p>sum=sum-30;</p>
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q2" value="fjjdujfhuye" align="left">Parenthesis should be replaced with braces.</li>
+  <li><input type="radio" name="q2" value="dhhhfju jjuf jru fuj" align="right">There should be semicolon after while(sum<=1000)</li>
+  <li><input type="radio" name="q2" value="dhhhufh hhryhhf" align="left">Braces are required to enclose the while function.</li>
+  <li><input type="radio" name="q2" value="Raff" align="right">sum=sum-30 should be replaced by sum=sum+30.</li>
+</ul>
+
+
+3.In order to fetch the address of the variable we write preceding ____ sign before the variable name.
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q3" value="Raff">(&)Ampersand</li>
+  <li><input type="radio" name="q3" value="dhhhfju jjuf jru fuj">(*)Asterix</li>
+  <li><input type="radio" name="q3" value="dhhhufh hhryhhf">(%)Percentage</li>
+  <li><input type="radio" name="q3" value="bbbbb">(!)Exclamation</li>
+</ul>
+
+4. Wrapping up of data and it's associated function into a single unit is known as:
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q4" value="Raff">Encapsulation</li>
+  <li><input type="radio" name="q4" value="dhhhfju jjuf jru fuj">Overloading</li>
+  <li><input type="radio" name="q4" value="dhhhufh hhryhhf">Overiding</li>
+  <li><input type="radio" name="q4" value="nnnnnn">Abstraction</li>
+</ul>
+
+
+5. Which of the following is the scope resolution operator?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q5" value="fjjdujfhuye">!:</li>
+  <li><input type="radio" name="q5" value="dhhhfju jjuf jru fuj">;</li>
+  <li><input type="radio" name="q5" value="Raff">::</li>
+  <li><input type="radio" name="q5" value="fortnam">&&</li>
+</ul>
+
+                    </div>
+					</section>
+					
+	
+						
+<!-- About Me -->
+					<section id="q2" class="three">
+						<div class="container">
+
+							<header>
+								<h2>TechKrunch</h2>
+							</header>
+
+							<h3><center>Questions 6-10</center></h3>
+
+<form name="quiz">
+6.Which of the following C function is used to concatenate two strings? 
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q6" value="Raff">strcat()</li>
+  <li><input type="radio" name="q6" value="dhhhfju jjuf jru fuj">strcmp()</li>
+  <li><input type="radio" name="q6" value="dhhhufh hhryhhf">strcon()</li>
+  <li><input type="radio" name="q6" value="nnnnn">There is no complier defined functions for this.</li>
+</ul>
+
+
+7.What is the size of an int variable in a 32 bit compiler?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q7" value="fjjdujfhuye">2 bits</li>
+  <li><input type="radio" name="q7" value="dhhhfju jjuf jru fuj">4 bits</li>
+  <li><input type="radio" name="q7" value="dhhhufh hhryhhf">2 bytes</li>
+  <li><input type="radio" name="q7" value="Raff">4 bytes</li>
+</ul>
+
+
+8. What is the first and last index number of the first and last array element of an array containing 48 elements?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q8" value="fjjdujfhuye">1 and 48</li>
+  <li><input type="radio" name="q8" value="Raff">0 and 47</li>
+  <li><input type="radio" name="q8" value="dhhhufh hhryhhf">1 and 47</li>
+  <li><input type="radio" name="q8" value="Raffnnn">It depends on the compiler environment used for compiling the code.</li>
+</ul>
+
+
+9. Which of the following notation is used as an assignment operator in the Pascal algorithm notation?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q9" value="fjjdujfhuye">::=</li>
+  <li><input type="radio" name="q9" value="dhhhfju jjuf jru fuj">=</li>
+  <li><input type="radio" name="q9" value="Raff">:=</li>
+  <li><input type="radio" name="q9" value="Rafful"><=</li>
+</ul>
+
+10. What is the minimum number of times a do while loop is Guaranteed to run?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q10" value="fjjdujfhuye">The question is ambiguous.</li>
+  <li><input type="radio" name="q10" value="dhhhfju jjuf jru fuj">0</li>
+  <li><input type="radio" name="q10" value="dhhhufh hhryhhf">It depends on the loop control variable.</li>
+  <li><input type="radio" name="q10" value="Raff">1</li>
+</ul>
+
+
+                    </div>
+					</section>
+				
+				
+				<!-- About Me -->
+					<section id="q3" class="three">
+						<div class="container">
+
+							<header>
+								<h2>TechKrunch</h2>
+							</header>
+
+							<h3><center>Questions 11-15</center></h3>
+
+<form name="quiz">
+11. Who is the founder of C language?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q11" value="fjjdujfhuye">Ryan Goshling</li>
+  <li><input type="radio" name="q11" value="Raff">Dennis Ritchie</li>
+  <li><input type="radio" name="q11" value="dhhhufh hhryhhf">Sun Microsoft</li>
+  <li><input type="radio" name="q11" value="Raffilool">Alan Turing</li>
+</ul>
+
+
+12.Which of the special character can be used as a valid variable name?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q12" value="fjjdujfhuye" align="leftwards">-(Hyphen)</li>
+  <li><input type="radio" name="q12" value="dhhhfju jjuf jru fuj">+(Plus)</li>
+  <li><input type="radio" name="q12" value="dhhhufh hhryhhf">#(hash)</li>
+  <li><input type="radio" name="q12" value="Raff">_(Underscore)</li>
+</ul>
+
+
+13.What is the data-type of the return type of a function in C and C++ is:
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q13" value="fjjdujfhuye">void</li>
+  <li><input type="radio" name="q13" value="dhhhfju jjuf jru fuj">It depends on the programmer on how he writes the codes.</li>
+  <li><input type="radio" name="q13" value="Raff">int</li>
+  <li><input type="radio" name="q13" value="Rafnnnf">None of the above</li>
+</ul>
+
+14. On using #include<stdio.h> when the contents of the studio.h is added to the program?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q14" value="fjjdujfhuye">During run time</li>
+  <li><input type="radio" name="q14" value="dhhhfju jjuf jru fuj">During compilation time</li>
+  <li><input type="radio" name="q14" value="dhhhufh hhryhhf">After main() is compiled.</li>
+  <li><input type="radio" name="q14" value="Raff">During preprocessing</li>
+</ul>
+
+
+15. Network connecting several network is known as:
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q15" value="fjjdujfhuye">APRA net</li>
+  <li><input type="radio" name="q15" value="Raff">Internet</li>
+  <li><input type="radio" name="q15" value="dhhhufh hhryhhf">Social Network</li>
+  <li><input type="radio" name="q15" value="Raffffff">Intranet</li>
+</ul>
+
+                    </div>
+					</section>
+				
+				
+				<!-- About Me -->
+					<section id="q4" class="three">
+						<div class="container">
+
+							<header>
+								<h2>TechKrunch</h2>
+							</header>
+
+							<h3><center>Questions 16-20</center></h3>
+
+<form name="quiz">
+16. Program are automatically loaded and operates as a part of the browser is known as:
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q16" value="fjjdujfhuye">Add-ons</li>
+  <li><input type="radio" name="q16" value="Raff">Plug-ins</li>
+  <li><input type="radio" name="q16" value="dhhhufh hhryhhf">MS download utility</li>
+  <li><input type="radio" name="q16" value="Raffmmm">Netscape manager.</li>
+</ul>
+
+
+17. Software that allows us to view the web-page is called as________ 
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q17" value="Raff">Browser</li>
+  <li><input type="radio" name="q17" value="dhhhfju jjuf jru fuj">iOS</li>
+  <li><input type="radio" name="q17" value="dhhhufh hhryhhf">Website</li>
+  <li><input type="radio" name="q17" value="Rafjjjf">Interpreter</li>
+</ul>
+
+
+18. Which of following is the protocol in the URL:- "http://geekyhub.in""
+  <li><input type="radio" name="q18" value="fjjdujfhuye">://</li>
+  <li><input type="radio" name="q18" value="dhhhfju jjuf jru fuj">It depends on the IP address not on the URL</li>
+  <li><input type="radio" name="q18" value="dhhhufh hhryhhf">.in</li>
+  <li><input type="radio" name="q18" value="Raff">http</li>
+</ul>
+
+
+<br>
+<br>
+
+19. ISP stands for:
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q19" value="Raff">Internet Service Provider</li>
+  <li><input type="radio" name="q19" value="dhhhfju jjuf jru fuj">Intranet Service Provider</li>
+  <li><input type="radio" name="q19" value="dhhhufh hhryhhf">Internet Search Protocol</li>
+  <li><input type="radio" name="q19" value="Raffmm">None of the above</li>
+</ul>
+
+
+20. Java source code is compiled into:  
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q20" value="fjjdujfhuye">.exe file</li>
+  <li><input type="radio" name="q20" value="dhhhfju jjuf jru fuj">.srt file</li>
+  <li><input type="radio" name="q20" value="dhhhufh hhryhhf">Machine Code</li>
+  <li><input type="radio" name="q20" value="Raff">Byte Code</li>
+</ul>
+
+                    </div>
+					</section>
+					
+					<section id="q5" class="three">
+						<div class="container">
+
+							<header>
+								<h2>TechKrunch</h2>
+							</header>
+
+							<h3><center>Questions 21-25</center></h3>
+							
+
+<form name="quiz">
+21. Single line comment starts with ______ in C/C++ and Java is: 
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q21" value="fjjdujfhuye">??</li>
+  <li><input type="radio" name="q21" value="Raff">//</li>
+  <li><input type="radio" name="q21" value="dhhhufh hhryhh">#</li>
+  <li><input type="radio" name="q21" value="Raffgggg">*/</li>
+</ul>
+
+ 22.In its early stages, Java was named: 
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q22" value="fjjdujfhuye">Coffee</li>
+  <li><input type="radio" name="q22" value="dhhhfju jjuf jru fuj">Small Talk</li>
+  <li><input type="radio" name="q22" value="dhhhufh hhryhhf">Netscape</li>
+  <li><input type="radio" name="q22" value="Raff">OAK</li>
+</ul>
+
+
+23. In C++ which of the following will probably cause an compile time error? 
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q23" value="fjjdujfhuye">float a=9,b;;</li>
+  <li><input type="radio" name="q23" value="Raffhh">int a;</li>
+  <li><input type="radio" name="q23" value="Raff">cout"end_l";</li>
+  <li><input type="radio" name="q23" value="Rafnnnf">cout<<"Hello World";</li>
+</ul>
+
+24.Which of the following is not a sorting algorithm?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q24" value="fjjdujfhuye">Quick Sort</li>
+  <li><input type="radio" name="q24" value="dhhhfju jjuf jru fuj">Merge Sort</li>
+  <li><input type="radio" name="q24" value="Raff">Rapid Sort</li>
+  <li><input type="radio" name="q24" value="Raffmmm">Shell Sort</li>
+</ul>
+
+25.To initialize a class object during declaration can be done through: 
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q25" value="fjjdujfhuye">Polymorphism</li>
+  <li><input type="radio" name="q25" value="dhhhfju jjuf jru fuj">Encapsulation</li>
+  <li><input type="radio" name="q25" value="dhhhufh hhryhhf">Preprocessor Macros</li>
+  <li><input type="radio" name="q25" value="Raff">Constructor</li>
+</ul>
+
+                    </div>
+					</section>
+					
+					
+					<section id="q6" class="three">
+						<div class="container">
+
+							<header>
+								<h2>TechKrunch</h2>
+							</header>
+
+							<h3><center>Questions 26-30</center></h3>
+
+<form name="quiz">
+26. Which of the following is not a valid variable name in C/C++? 
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q26" value="fjjdujfhuye">int A;</li>
+  <li><input type="radio" name="q27" value="dhhhfju jjuf jru fuj">int a_b;</li>
+  <li><input type="radio" name="q27" value="Raff">int abc-d;</li>
+  <li><input type="radio" name="q27" value="Raffnn">float abb,abbb,abcbb;</li>
+</ul>
+
+
+27. What is the value of i in the following code fragment?
+a=5;
+i=(a++)+(++a); 
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q28" value="fjjdujfhuye">10</li>
+  <li><input type="radio" name="q28" value="dhhhfju jjuf jru fuj">13</li>
+  <li><input type="radio" name="q28" value="dhhhufh hhryhhf">Compiling Error</li>
+  <li><input type="radio" name="q28" value="Raff">12</li>
+</ul>
+
+
+28.Which of the following is a ternary operator?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q29" value="Raff">:?</li>
+  <li><input type="radio" name="q29" value="dhhhfju jjuf jru fuj">::?</li>
+  <li><input type="radio" name="q29" value="dhhhufh hhryhhf">i=(++a);</li>
+  <li><input type="radio" name="q29" value="Raffnnn"><<</li>
+</ul>
+
+29.Who is the inventor bluetooth?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q30" value="fjjdujfhuye">Karim Benzeoil</li>
+  <li><input type="radio" name="q30" value="dhhhfju jjuf jru fuj">Younger Futhark </li>
+  <li><input type="radio" name="q30" value="dhhhufh hhryhhf">George Boole</li>
+  <li><input type="radio" name="q30" value="Raff">Jaap Haartsen</li>
+</ul>
+
+
+30.BOSS is?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q31" value="fjjdujfhuye">Computer language</li>
+  <li><input type="radio" name="q31" value="dhhhfju jjuf jru fuj">Virus</li>
+  <li><input type="radio" name="q31" value="dhhhufh hhryhhf">Driver Installer Program</li>
+  <li><input type="radio" name="q31" value="Raff">Operating System</li>
+</ul>
+
+                    </div>
+					</section>
+				
+				<!-- Contact -->
+					<section id="s" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Get score</h2>
+								<h1>(Wait for invigilator to give the password to obtain your scrore)</h1>
+							</header>
+
+<input type="button" value="Get score" onClick="getScore(this.form)">
+<br>
+<br>
+<p><input class="bgclr" type="password" size="16" name="percentage1" placeholder="   Password"></strong></p>
+<p><input class="bgclr" type="text" size="16" name="percentage" disabled placeholder="   Score"></strong>
+
+</form>
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>TechKrunch.</li><li>Design Powered by ImagineCode</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
